@@ -1,24 +1,23 @@
 <?php
 
 
-namespace App\Resolver;
+namespace App\GraphQl\Resolver;
 
-
-use App\Entity\Astronaut;
 use App\Repository\AstronautRepository;
+use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Definition\Resolver\AliasedInterface;
 use Overblog\GraphQLBundle\Definition\Resolver\ResolverInterface;
-use Symfony\Component\Uid\Uuid;
 
-final class AstronautResolver implements ResolverInterface, AliasedInterface
+
+final class AstronautsResolver implements ResolverInterface, AliasedInterface
 {
     /**
      * @var AstronautRepository
      */
     private AstronautRepository $astronautRepository;
 
+
     /**
-     * AstronautResolver constructor.
      *
      * @param AstronautRepository $astronautRepository
      */
@@ -27,23 +26,25 @@ final class AstronautResolver implements ResolverInterface, AliasedInterface
         $this->astronautRepository = $astronautRepository;
     }
 
+
     /**
-     * @param string $id
+     * @param Argument $argument
      *
-     * @return Astronaut|null
+     * @return \App\Entity\Astronaut[]
      */
-    public function resolve(string $id): ?Astronaut
+    public function resolve(int $limit, ?string $pseudo): array
     {
-        return  !Uuid::isValid($id) ? null : $this->planetRepository->find($id);
+        dump($pseudo);
+        return $this->astronautRepository->findBy([], [],$limit, 0);
     }
 
     /**
-     * @return array [<string, string>]
+     * {@inheritdoc}
      */
     public static function getAliases(): array
     {
         return [
-            'resolve' => 'Astronaut',
+            'resolve' => 'Astronauts',
         ];
     }
 }

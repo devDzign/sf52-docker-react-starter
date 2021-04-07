@@ -26,8 +26,8 @@ class Astronaut
     private $pseudo;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Grade::class)
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity="Grade")
+     * @ORM\JoinColumn(name="grade_id", referencedColumnName="id")
      */
     private $grade;
 

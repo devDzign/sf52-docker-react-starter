@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Resolver;
+namespace App\GraphQl\Resolver;
 
 
 use App\Entity\Astronaut;
@@ -43,10 +43,6 @@ final class PlanetResolver implements ResolverInterface, AliasedInterface
 
     public function resolveInAstronaut(Astronaut $astronaut, $args, $context, $info)
     {
-       dump($args);
-       dump($context);
-       dump($info);
-
         return $this->planetRepository->findByAstronaut($astronaut->getId());
     }
 

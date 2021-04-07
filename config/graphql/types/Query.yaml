@@ -11,7 +11,14 @@ Query:
         resolve: "@=resolver('Astronaut', [args['id']])"
       Astronauts:
         type: '[Astronaut]'
-        resolve: "@=resolver('Astronauts')"
+        args:
+          limit:
+            description: 'Resolves Astronaut using its limit.'
+            type: 'Int'
+          pseudo:
+            description: 'Resolves Astronaut using its limit.'
+            type: 'String'
+        resolve: "@=resolver('Astronauts', [args['limit'], args['pseudo']] )"
       Planet:
         type: 'Planet'
         args:
