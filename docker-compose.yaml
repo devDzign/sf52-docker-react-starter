@@ -8,7 +8,7 @@ services:
             POSTGRES_USER: main
             POSTGRES_DB: '${DOCKER_PROJET_NAME}_db'
         ports:
-            - '5432'
+            - '25432:5432'
     redis:
         image: library/redis:6-alpine
         container_name: '${DOCKER_PROJET_NAME}_redis'

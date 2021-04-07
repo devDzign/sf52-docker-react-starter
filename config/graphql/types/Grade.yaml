@@ -1,0 +1,10 @@
+Grade:
+  type: object
+  config:
+    fields:
+      id:
+        type: 'String!'
+        description: "The id of the character."
+      name:
+        type: 'String!'
+        description: "The name of the character."

@@ -3,3 +3,8 @@ index:
   controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
   defaults:
     template: ui/index.html.twig
+
+
+#overblog_graphql_multiple_endpoint:
+#  resource: "@OverblogGraphQLBundle/Resources/config/routing/multiple.yaml"
+#  prefix: /graphql
