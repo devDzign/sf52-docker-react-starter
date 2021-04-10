@@ -32,6 +32,12 @@
         <testsuite name="e2e">
             <directory>tests/EndToEnd</directory>
         </testsuite>
+        <testsuite name="repo">
+            <directory>tests/Repository</directory>
+        </testsuite>
+        <testsuite name="controller">
+            <directory>tests/Controller</directory>
+        </testsuite>
     </testsuites>
     <listeners>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
