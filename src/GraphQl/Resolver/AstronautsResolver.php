@@ -16,7 +16,6 @@ final class AstronautsResolver implements ResolverInterface, AliasedInterface
      */
     private AstronautRepository $astronautRepository;
 
-
     /**
      *
      * @param AstronautRepository $astronautRepository
@@ -34,7 +33,6 @@ final class AstronautsResolver implements ResolverInterface, AliasedInterface
      */
     public function resolve(int $limit, ?string $pseudo): array
     {
-        dump($pseudo);
         return $this->astronautRepository->findBy([], [],$limit, 0);
     }
 
