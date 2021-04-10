@@ -63,6 +63,7 @@
         "symfony/stopwatch": "^5.2",
         "symfony/var-dumper": "^5.2",
         "symfony/web-profiler-bundle": "^5.2",
+        "zenstruck/browser": "^0.4.0",
         "zenstruck/foundry": "^1.9"
     },
     "config": {

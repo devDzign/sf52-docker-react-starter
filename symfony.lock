@@ -1,4 +1,7 @@
 {
+    "behat/mink": {
+        "version": "v1.8.1"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.1"
     },
@@ -126,6 +129,9 @@
     },
     "monolog/monolog": {
         "version": "2.2.0"
+    },
+    "mtdowling/jmespath.php": {
+        "version": "2.6.0"
     },
     "nacmartin/phpexecjs": {
         "version": "v3.0.0"
@@ -634,6 +640,9 @@
     },
     "webonyx/graphql-php": {
         "version": "v0.13.9"
+    },
+    "zenstruck/browser": {
+        "version": "v0.4.0"
     },
     "zenstruck/callback": {
         "version": "v1.2.0"
