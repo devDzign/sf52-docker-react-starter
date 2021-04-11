@@ -32,7 +32,7 @@ use Factories, ResetDatabase;
     {
         $client = static::createPantherClient();
 
-        $crawler = $client->request('GET', '/grade/new');
+        $client->request('GET', '/grade/new');
 
         $client
             ->submitForm(

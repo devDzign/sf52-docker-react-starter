@@ -14,6 +14,7 @@ use Factories, ResetDatabase, HasBrowser;
 
     public function test_best_grade_list(): void
     {
+
         GradeFactory::createOne(['name' => 'test2020']);
         GradeFactory::createOne(['name' => 'test2021']);
         GradeFactory::createOne(['name' => 'test2022']);

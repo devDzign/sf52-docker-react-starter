@@ -8,9 +8,8 @@ class HeathTest extends PantherTestCase
 {
     public function testSomething(): void
     {
-        $client = static::createPantherClient();
-        $crawler = $client->request('GET', '/');
-
+        $client = $this->createPantherClient();
+        $client->request('GET', '/');
         $this->assertSelectorTextContains('h1', 'Hello World');
     }
 }

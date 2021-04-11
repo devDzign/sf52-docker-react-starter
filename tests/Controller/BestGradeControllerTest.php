@@ -2,6 +2,7 @@
 
 namespace App\Tests\Controller;
 
+use App\Entity\Grade;
 use App\Factory\GradeFactory;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Zenstruck\Browser\Test\HasBrowser;
@@ -14,7 +15,9 @@ class BestGradeControllerTest extends WebTestCase
 
     public function testSomething(): void
     {
-        $grade = GradeFactory::createOne(['name' => 'test 2020'])
+        $grade = new GradeFactory();
+
+        $grade = $grade->createOne(['name' => 'test 2020'])
             ->enableAutoRefresh();
 
         $this
