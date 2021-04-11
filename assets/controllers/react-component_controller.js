@@ -1,4 +1,7 @@
 import { Controller } from 'stimulus';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import HealthReact from "../js/react/srr/elements/health-react.element";
 
 /*
  * This is an example Stimulus controller!
@@ -10,7 +13,14 @@ import { Controller } from 'stimulus';
  * Delete this file or adapt it for your use!
  */
 export default class extends Controller {
+    static values = {
+        name: String
+    }
+
     connect() {
-        this.element.textContent = 'Hello Stimulus!';
+        ReactDOM.render(
+            <HealthReact name={this.nameValue} />,
+            this.element
+        )
     }
 }

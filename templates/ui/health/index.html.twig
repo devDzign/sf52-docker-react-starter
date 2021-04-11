@@ -29,8 +29,10 @@
                         React component
                     </div>
                     <div class="card-body">
-                        {{ react_component('HealthReact', {'props': { "name": "super cool mon, super react props"} }) }}
-
+                        {# {{ react_component('HealthReact', {'props': { "name": "super cool mon, super react props"} }) }} #}
+                        <span
+                                {{ stimulus_controller('react-component', { "name": "super cool react props"}) }}
+                        ></span>
                         {# {{ react_component('HealthReact', {'props': { "name": "super cool react props"} , 'rendering': 'client_side' } ) }} #}
                         </ul>
                     </div>

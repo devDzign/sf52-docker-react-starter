@@ -1,21 +1,18 @@
 <?php
 
-
 namespace App\Controller;
-
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HealthController extends AbstractController
+class StimulusController extends AbstractController
 {
-    #[Route('/health', name: 'health')]
+    #[Route('/stimulus', name: 'stimulus')]
     public function index(): Response
     {
-        return $this->render('ui/health/index.html.twig', [
+        return $this->render('stimulus/index.html.twig', [
 
         ]);
     }
-
 }
