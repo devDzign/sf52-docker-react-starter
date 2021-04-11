@@ -1,17 +1,15 @@
 import { Controller } from 'stimulus';
 import ReactDOM from 'react-dom';
 import React from 'react';
-import HealthReact from "../js/react/srr/elements/health-react.element";
-
+import CounterElement from "../js/react/srr/elements/counter.element";
 
 export default class extends Controller {
     static values = {
-        name: String
+        count: Number
     }
-
     connect() {
         ReactDOM.render(
-            <HealthReact name={this.nameValue} />,
+            <CounterElement count={this.countValue} />,
             this.element
         )
     }
