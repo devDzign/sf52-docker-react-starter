@@ -29,15 +29,22 @@
         <testsuite name="functional">
             <directory>tests/Functional</directory>
         </testsuite>
+        <testsuite name="repo">
+            <directory>tests/Repository</directory>
+        </testsuite>
         <testsuite name="e2e">
             <directory>tests/EndToEnd</directory>
+        </testsuite>
+        <testsuite name="controller">
+            <directory>tests/Controller</directory>
         </testsuite>
     </testsuites>
     <listeners>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
     </listeners>
     <extensions>
-        <extension class="Symfony\Component\Panther\ServerExtension" />
+<!--        <extension class="Symfony\Component\Panther\ServerExtension" />-->
+        <extension class="Zenstruck\Browser\Test\BrowserExtension" />
     </extensions>
     <logging>
         <junit outputFile="var/coverage/junit.xml"/>

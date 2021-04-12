@@ -9,6 +9,15 @@ services:
             POSTGRES_DB: '${DOCKER_PROJET_NAME}_db'
         ports:
             - '25432:5432'
+    database_panther:
+        image: 'postgres:alpine'
+        container_name: '${DOCKER_PROJET_NAME}_test_panther_postgres'
+        environment:
+            POSTGRES_PASSWORD: main
+            POSTGRES_USER: main
+            POSTGRES_DB: '${DOCKER_PROJET_NAME}_test_panther_db'
+        ports:
+            - '35432:5432'
     redis:
         image: library/redis:6-alpine
         container_name: '${DOCKER_PROJET_NAME}_redis'

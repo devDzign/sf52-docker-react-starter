@@ -14,7 +14,7 @@ class HealthController extends AbstractController
     public function index(): Response
     {
         return $this->render('ui/health/index.html.twig', [
-            'controller_name' => 'HealthController',
+
         ]);
     }
 
